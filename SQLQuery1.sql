@@ -1,21 +1,15 @@
-create database dbDemo
 
-create table student(
-s_id int,
+
+create database testDemo
+
+create table employee(emp_id int primary key,
 name varchar(120),
-last varchar(120),
 age int
-);
+check (age>=18),
+adress varchar(120))
 
-select * from student
+select * from employee;
 
-insert into student([s_id],[name],[last],[age])values(001,'Basant','Bamnele',28);
-insert into student([s_id],[name],[last],[age])values(002,'raj','thakur',20);
-insert into student([s_id],[name],[last],[age])values(003,'th','f',28);
-insert into student([s_id],[name],[last],[age])values(004,'we','rr',22);
-
-delete from student where age=22;
-
-
-
-
+insert into employee(emp_id,name,age,adress) values(12,'Basant',19,'Gwalior');
+insert into employee(emp_id,name,age,adress) values(13,'f',20,'sgr');
+insert into employee(emp_id,name,age,adress) values(14,'f',18,'sgr');
